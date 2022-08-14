@@ -1,7 +1,8 @@
 {
-  "name": "use-responsive",
-  "main": "dist/cjs/use-responsive.js",
-  "module": "dist/esm/use-responsive.esm.js",
+  "name": "react-responsive-resize",
+  "main": "dist/cjs/react-responsive-resize.js",
+  "module": "dist/esm/react-responsive-resize.esm.js",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist",
     "package.json",
@@ -25,6 +26,7 @@
   },
   "version": "0.0.1",
   "author": "Fortune Ehis",
+  "license": "MIT",
   "homepage": "https://github.com/fortuneehis/use-responsive#readme",
   "scripts": {
     "lint": "npx eslint 'src/**/*.ts'",
@@ -33,7 +35,7 @@
     "build": "yarn lint && yarn format && yarn test && npx rimraf dist && yarn build:tsc && npx rollup -c rollup.config.js",
     "test": "jest",
     "prepublish:public": "yarn build && yarn bump-version",
-    "publish:public": "yarn publish --access public",
+    "publish:public": "npm publish --access public",
     "prepare": "npx husky install"
   },
   "devDependencies": {

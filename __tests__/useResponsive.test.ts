@@ -15,31 +15,94 @@ beforeAll(() => {
   }
 })
 
-test("It returns true for mobile", async () => {
-  act(() => {
-    window.resizeTo(500, 1024)
+describe("Mobile test", () => {
+  test("It returns true", async () => {
+    act(() => {
+      window.resizeTo(500, 1024)
+    })
+
+    const { result } = renderHook(() =>
+      useResponsive({
+        max: 768,
+      })
+    )
+
+    expect(result.current).toBeTruthy()
   })
 
-  const { result } = renderHook(() =>
-    useResponsive({
-      max: 768,
+  test("It returns false", async () => {
+    act(() => {
+      window.resizeTo(960, 1024)
     })
-  )
 
-  expect(result.current).toBeTruthy()
+    const { result } = renderHook(() =>
+      useResponsive({
+        max: 768,
+      })
+    )
+
+    expect(result.current).toBeFalsy()
+  })
 })
 
-test("It returns false for mobile", async () => {
-  act(() => {
-    window.resizeTo(960, 1024)
+describe("Tablet test", () => {
+  test("It returns true", async () => {
+    act(() => {
+      window.resizeTo(960, 1024)
+    })
+
+    const { result } = renderHook(() =>
+      useResponsive({
+        min: 768,
+        max: 1024,
+      })
+    )
+
+    expect(result.current).toBeTruthy()
   })
 
-  const { result } = renderHook(() =>
-    useResponsive({
-      max: 768,
+  test("It returns false", async () => {
+    act(() => {
+      window.resizeTo(600, 1024)
     })
-  )
-  console.log(result.current)
 
-  expect(result.current).toBeFalsy()
+    const { result } = renderHook(() =>
+      useResponsive({
+        min: 768,
+        max: 1024,
+      })
+    )
+
+    expect(result.current).toBeFalsy()
+  })
+})
+
+describe("Desktop test", () => {
+  test("It returns true", async () => {
+    act(() => {
+      window.resizeTo(1920, 1024)
+    })
+
+    const { result } = renderHook(() =>
+      useResponsive({
+        min: 1024,
+      })
+    )
+
+    expect(result.current).toBeTruthy()
+  })
+
+  test("It returns false", async () => {
+    act(() => {
+      window.resizeTo(768, 1024)
+    })
+
+    const { result } = renderHook(() =>
+      useResponsive({
+        min: 1024,
+      })
+    )
+
+    expect(result.current).toBeFalsy()
+  })
 })
