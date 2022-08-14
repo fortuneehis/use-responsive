@@ -1,10 +1,31 @@
 {
+  "name": "use-responsive",
   "main": "dist/cjs/use-responsive.js",
   "module": "dist/esm/use-responsive.esm.js",
   "files": [
     "dist",
-    "package.json"
+    "package.json",
+    "README.md"
   ],
+  "keywords": [
+    "responsive",
+    "react",
+    "device",
+    "screen",
+    "viewport",
+    "match"
+  ],
+  "description": "A react package for responsive design :)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fortuneehis/use-responsive.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fortuneehis/use-responsive/issues"
+  },
+  "version": "0.0.1",
+  "author": "Fortune Ehis",
+  "homepage": "https://github.com/fortuneehis/use-responsive#readme",
   "scripts": {
     "lint": "npx eslint 'src/**/*.ts'",
     "format": "npx prettier --write 'src/**/*.ts'",
