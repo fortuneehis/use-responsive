@@ -29,7 +29,8 @@
   "scripts": {
     "lint": "npx eslint 'src/**/*.ts'",
     "format": "npx prettier --write 'src/**/*.ts'",
-    "build": "yarn lint && yarn format && npx rimraf dist && npx rollup -c rollup.config.js",
+    "build:tsc": "npx tsc --emitDeclarationOnly",
+    "build": "yarn lint && yarn format && npx rimraf dist && yarn build:tsc && npx rollup -c rollup.config.js",
     "test": "jest",
     "prepare": "npx husky install"
   },
