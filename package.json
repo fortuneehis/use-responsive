@@ -30,8 +30,10 @@
     "lint": "npx eslint 'src/**/*.ts'",
     "format": "npx prettier --write 'src/**/*.ts'",
     "build:tsc": "npx tsc --emitDeclarationOnly",
-    "build": "yarn lint && yarn format && npx rimraf dist && yarn build:tsc && npx rollup -c rollup.config.js",
+    "build": "yarn lint && yarn format && yarn test && npx rimraf dist && yarn build:tsc && npx rollup -c rollup.config.js",
     "test": "jest",
+    "prepublish:public": "yarn build && yarn bump-version",
+    "publish:public": "yarn publish --access public",
     "prepare": "npx husky install"
   },
   "devDependencies": {

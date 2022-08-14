@@ -82,6 +82,14 @@ const ExampleComponent = () => (
 export default ExampleComponent
 ```
 
+## Properties
+
+`min` - An optional property for setting the minimum constraint.
+
+`max` - An optional property for setting the maximum constraint.
+
+`direction` - An optional property for setting the direction to either horizontal for width or vertical for height. (defaults to "horizontal")
+
 ## Browser Support
 
 ### Out of the box
