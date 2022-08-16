@@ -1,7 +1,7 @@
 {
-  "name": "react-responsive-resize",
-  "main": "dist/cjs/react-responsive-resize.js",
-  "module": "dist/esm/react-responsive-resize.esm.js",
+  "name": "use-responsive-lib",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",

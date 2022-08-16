@@ -89,34 +89,3 @@ export default ExampleComponent
 `max` - An optional property for setting the maximum constraint.
 
 `direction` - An optional property for setting the direction to either horizontal for width or vertical for height. (defaults to "horizontal")
-
-## Browser Support
-
-### Out of the box
-
-<table>
-<tr>
-<td>Chrome</td>
-<td>9</td>
-</tr>
-<tr>
-<td>Firefox (Gecko)</td>
-<td>6</td>
-</tr>
-<tr>
-<td>MS Edge</td>
-<td>All</td>
-</tr>
-<tr>
-<td>Internet Explorer</td>
-<td>10</td>
-</tr>
-<tr>
-<td>Opera</td>
-<td>12.1</td>
-</tr>
-<tr>
-<td>Safari</td>
-<td>5.1</td>
-</tr>
-</table>
