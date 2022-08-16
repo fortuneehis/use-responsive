@@ -1,10 +1,10 @@
-# react-responsive-resize
+# use-responsive-lib
 
 ## Information
 
 <table>
 <tr>
-<td>Package</td><td>react-responsive-resize</td>
+<td>Package</td><td>use-responsive-lib</td>
 </tr>
 <tr>
 <td>Description</td>
@@ -21,13 +21,13 @@
 ### NPM
 
 ```console
-$ npm install react-responsive-resize --save
+$ npm install use-responsive-lib --save
 ```
 
 ### Yarn
 
 ```console
-$ yarn add react-responsive-resize
+$ yarn add use-responsive-lib
 ```
 
 ## Usage
@@ -35,7 +35,7 @@ $ yarn add react-responsive-resize
 ### Hooks
 
 ```jsx
-import { useResponsive } from "react-responsive-resize"
+import { useResponsive } from "use-responsive-lib"
 
 const ExampleComponent = () => {
   const isMobile = useResponsive({ max: 768 })
@@ -59,7 +59,7 @@ export default ExampleComponent
 ### With Components
 
 ```jsx
-import { Responsive } from "react-responsive-resize"
+import { Responsive } from "use-responsive-lib"
 
 const ExampleComponent = () => (
   <div>
